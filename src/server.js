@@ -11,7 +11,7 @@ const publicpath=path.join(__dirname,"../public");
 const viewspath=path.join(__dirname,"../templates/views");
 const partialspath=path.join(__dirname,"../templates/partials");
 
-app.set("view engine, hbs");
+app.set("view engine", "hbs");
 app.set("views",viewspath);
 hbs.registerPartials(partialspath);
 app.use(express.static(publicpath));
