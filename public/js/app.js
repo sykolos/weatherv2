@@ -11,6 +11,24 @@ const dateElement = document.querySelector('.date');
 const currentDate = new Date();
 dateElement.textContent = new Date(currentDate).toDateString();
 
+if ("geolocation" in navigator) {
+    locationElement.textContent = "Loading...";
+    navigator.geolocation.getCurrentPosition({
+        function (position) {
+            const lat=position.coords.latitude;
+            const lon=position.coords.longitude;
+            const apiurl='https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}';
+            fetch(apiurl).then((response) => response.json()).then((data) => {
+                if(data && data.address && data.address.city){
+                    const city=data.address.city;
+                    showData(city);
+                }
+            });
+        }
+    });
+}
+    
+
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault();
     locationElement.textContent = "Loading...";
