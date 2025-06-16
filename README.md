@@ -13,7 +13,7 @@ A felhasználói felületet Express és Handlebars (`hbs`) sablonmotor segítsé
 - Axios (az API-hívásokhoz)
 
 ## 🚀 Futtatás
-1.Függőségek
+1. Függőségek
  - npm install
  - npm install dotenv
 2. .env file létrehozása
@@ -23,12 +23,12 @@ A felhasználói felületet Express és Handlebars (`hbs`) sablonmotor segítsé
 
 
 ## 🌍 Funkciók
-    Időjárás lekérdezése városnév alapján és lokáció alapján
-    Állapot ikon, hőmérséklet, páratartalom, időjárási leírás megjelenítése
-    Egyszerű, reszponzív UI
+- Időjárás lekérdezése városnév alapján és lokáció alapján
+- Állapot ikon, hőmérséklet, páratartalom, időjárási leírás megjelenítése
+- Egyszerű, reszponzív UI
 
 ## 🔑 API
-    Az alkalmazás az OpenWeatherMap aktuális időjárás végpontját használja.
-    Ingyenes kulcsot itt regisztrálhatsz: https://home.openweathermap.org/users/sign_up
+Az alkalmazás az OpenWeatherMap aktuális időjárás végpontját használja.
+Ingyenes kulcsot itt regisztrálhatsz: https://home.openweathermap.org/users/sign_up
 
 Ez a projekt tanulási célokat szolgál, de alapként felhasználható saját időjárás apphoz.
