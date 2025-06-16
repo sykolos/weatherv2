@@ -1,4 +1,5 @@
-var weatherApi= "/weather";
+var weatherApi= "/weather"; //api végpont
+//dom elemek
 const weatherForm = document.querySelector('form');
 const search = document.querySelector('input');
 const weatherIcon = document.querySelector('.weather-icon i');
@@ -6,11 +7,10 @@ const weatherCondition = document.querySelector('.weather-condition');
 const temperature = document.querySelector('.weather-temp span');
 const locationElement = document.querySelector('.place');
 const dateElement = document.querySelector('.date');
-
-//dátum kijelzés
+//dátum
 const currentDate = new Date();
 dateElement.textContent = new Date(currentDate).toDateString();
-
+//ha lehet, akkor a jelenlegi helyet használja
 if ("geolocation" in navigator) {
     locationElement.textContent = "Loading...";
     navigator.geolocation.getCurrentPosition(
@@ -40,9 +40,9 @@ if ("geolocation" in navigator) {
     console.log("error 3", error.message);
 }
     
-
+//ha rákeres más városra
 weatherForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+    e.preventDefault(); //ne frissítse az oldalt
     locationElement.textContent = "Loading...";
     //console.log(search.value);
     weatherIcon.className = "";
@@ -50,7 +50,7 @@ weatherForm.addEventListener('submit', (e) => {
     weatherCondition.textContent = "";
     showData(search.value);
 });
-
+//egy adott városhoz az időjárás
 function showData(city){
     getWeatherData(city, (result) => {
         if(result.cod==200){            
@@ -66,6 +66,7 @@ function showData(city){
         //console.log(result);
     });
 }
+//időjárás adatok lekérése
 function getWeatherData(city, callback) {
     const locationApi =weatherApi + "?address=" + city;
     fetch(locationApi).then((response) => {
