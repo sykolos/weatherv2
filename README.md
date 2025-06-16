@@ -15,8 +15,9 @@ A felhasználói felületet Express és Handlebars (`hbs`) sablonmotor segítsé
 ## 🚀 Futtatás
 1.Függőségek
  - npm install
-2. .env file
- - WEATHER_API_KEY="ide a saját api kulcsod"
+ - npm install dotenv
+2. .env file létrehozása
+ - WEATHER_API_KEY= ide a saját api kulcsod 
 3. Indítás
  - npm start
 
