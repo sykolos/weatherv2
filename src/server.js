@@ -19,7 +19,7 @@ app.use(express.static(publicpath));//statikus fájlok public mappából
 const port = process.env.PORT || 3000;
 //alap oldal
 app.get('/', (req, res) => {
-    res.render("index",{title:"idojaras v2"});
+    res.render("index",{title:"Időjárás"});
 });
 //weather route
 app.get('/weather',(req, res)=>{
