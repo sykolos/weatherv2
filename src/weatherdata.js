@@ -1,8 +1,10 @@
 const request = require('request'); //http kérésekhez
+require('dotenv').config();
+
 // openweather api kulcs és url
 const openweathermap={
     BASE_URL:"https://api.openweathermap.org/data/2.5/weather?q=",
-    API_KEY: "be53a4a359cc6c8ed0097e17bf9fd27e"
+    API_KEY: process.env.WEATHER_API_KEY
 }
 //időjárás lekérdezés
 const weatherdata=(address,callback)=>{
