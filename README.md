@@ -22,12 +22,12 @@ A felhasználói felületet Express és Handlebars (`hbs`) sablonmotor segítsé
  - npm start
 
 
-🌍 Funkciók
+##🌍 Funkciók
     Időjárás lekérdezése városnév alapján és lokáció alapján
     Állapot ikon, hőmérséklet, páratartalom, időjárási leírás megjelenítése
     Egyszerű, reszponzív UI
 
-🔑 API
+##🔑 API
     Az alkalmazás az OpenWeatherMap aktuális időjárás végpontját használja.
     Ingyenes kulcsot itt regisztrálhatsz: https://home.openweathermap.org/users/sign_up
 
